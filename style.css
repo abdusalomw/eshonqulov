@@ -1,0 +1,703 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #161c22; /* Umumiy to'q fon */
+    color: #ffffff;
+    min-height: 100vh;
+    border: 3px solid #239b56; /* Chetki yashil ramka */
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= NAVBAR ================= */
+header {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #2ecc71;
+}
+
+.logo-text-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    color: #2ecc71;
+}
+
+.logo-subtitle {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    color: #8c9ba5;
+    text-transform: uppercase;
+    margin-top: 3px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #2ecc71;
+}
+
+.btn-outline-sm {
+    text-decoration: none;
+    color: #2ecc71;
+    border: 1px solid #2ecc71;
+    padding: 10px 24px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-sm:hover {
+    background-color: #2ecc71;
+    color: #161c22;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    padding: 20px 40px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Chap taraf matnlari */
+.hero-left {
+    flex: 1;
+    max-width: 600px;
+}
+
+.badge-icon {
+    width: 34px;
+    height: 34px;
+    background-color: rgba(46, 204, 113, 0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.15);
+}
+
+.intro-text {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 3.5px;
+    color: #d1d5db;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.hero-title {
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.22;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+/* Ichki bo'sh yashil chiziqli matn effekti */
+.text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.3px #2ecc71;
+    display: inline-block;
+}
+
+.text-solid-green {
+    color: #2ecc71;
+}
+
+.hero-desc {
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: #9ca3af;
+    border-left: 2px solid #2ecc71;
+    padding-left: 16px;
+    margin-bottom: 36px;
+    max-width: 490px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.btn-primary {
+    text-decoration: none;
+    background-color: #2ecc71;
+    color: #161c22;
+    padding: 13px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 3px;
+    border: 1px solid #2ecc71;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #27ae60;
+    border-color: #27ae60;
+}
+
+.btn-secondary {
+    text-decoration: none;
+    background-color: transparent;
+    color: #2ecc71;
+    padding: 13px 30px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 3px;
+    border: 1px solid rgba(46, 204, 113, 0.5);
+    transition: all 0.3s ease;
+}
+
+.gallery-item {
+    position: relative;
+    width: 100%;
+    min-height: 160px;
+    aspect-ratio: 1 / 1;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1.5px solid #2ecc71;
+    background-color: #1f2933;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.img-label {
+    position: absolute;
+    z-index: 1;
+    font-size: 13px;
+    color: #9ca3af;
+}
+.btn-secondary:hover {
+    border-color: #2ecc71;
+    background-color: rgba(46, 204, 113, 0.08);
+}
+
+/* O'ng taraf rasm va bezaklar */
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 430px;
+    height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Orqa fondagi yashil gradient doira */
+.circle-bg {
+    position: absolute;
+    bottom: 0;
+    width: 410px;
+    height: 410px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #1d352d 0%, #174c34 55%, #1d6f42 100%);
+    z-index: 1;
+}
+
+/* Foydalanuvchi rasmi joylashadigan konteyner */
+.profile-photo-box {
+    position: relative;
+    z-index: 2;
+    width: 410px;
+    height: 450px;
+    border-bottom-left-radius: 205px;
+    border-bottom-right-radius: 205px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.profile-photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+/* Agar rasm hali qo'yilmagan bo'lsa ko'rinadigan eslatma */
+.image-placeholder-note {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+    padding: 15px;
+    border: 1px dashed #2ecc71;
+    border-radius: 8px;
+    background: rgba(22, 28, 34, 0.7);
+    pointer-events: none;
+}
+
+/* Dekorativ elementlar (Qulf, chiziq va barmoq ikonasi) */
+.deco-lock {
+    position: absolute;
+    top: -45px;
+    left: 15px;
+    z-index: 3;
+}
+
+.deco-curve {
+    position: absolute;
+    top: 10px;
+    left: -5px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.deco-tap {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    z-index: 3;
+}
+
+/* ================= RESPONSIVE (MOBIL UCHUN) ================= */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .hero-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-desc {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .image-wrapper {
+        width: 320px;
+        height: 320px;
+        margin-top: 30px;
+    }
+
+    .circle-bg {
+        width: 300px;
+        height: 300px;
+    }
+
+    .profile-photo-box {
+        width: 300px;
+        height: 330px;
+    }
+}
+
+
+
+
+
+/* ================= ABOUT PAGE STYLES ================= */
+.about-section {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    padding: 30px 40px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Chap taraf: 6 ta rasm panjarasi (3 ustun x 2 qator) */
+.about-gallery {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Kvadrat shakl */
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1.5px solid rgba(46, 204, 113, 0.35);
+    background-color: #1c242b;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    border-color: #2ecc71;
+    box-shadow: 0 8px 20px rgba(46, 204, 113, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Rasm qo'yilmagan holat uchun eslatma */
+.img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    color: #8c9ba5;
+    padding: 10px;
+    border: 1px dashed rgba(46, 204, 113, 0.4);
+}
+
+/* O'ng taraf: Matnlar qismi */
+.about-content {
+    flex: 1;
+    max-width: 580px;
+}
+
+.about-title {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.about-desc {
+    font-size: 14px;
+    line-height: 1.75;
+    color: #d1d5db;
+    border-left: 2px solid #2ecc71;
+    padding-left: 16px;
+    margin-bottom: 18px;
+}
+
+.about-desc-secondary {
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: #9ca3af;
+    margin-bottom: 28px;
+}
+
+/* Qisqa ma'lumotlar katakchalari */
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 32px;
+}
+
+.highlight-box {
+    background-color: rgba(46, 204, 113, 0.06);
+    border: 1px solid rgba(46, 204, 113, 0.25);
+    padding: 12px 16px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.highlight-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #2ecc71;
+    margin-bottom: 4px;
+}
+
+.highlight-value {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Mobil qurilmalar uchun moslashuv */
+@media (max-width: 992px) {
+    .about-section {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .about-gallery {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr); /* Telefonda 2 ustun bo'ladi */
+    }
+
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+/* ================= ABOUT PAGE STYLES ================= */
+.about-section {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    padding: 30px 40px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Chap taraf: 6 ta rasm panjarasi (3 ustun x 2 qator) */
+.about-gallery {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Kvadrat shakl */
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1.5px solid rgba(46, 204, 113, 0.35);
+    background-color: #1c242b;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    border-color: #2ecc71;
+    box-shadow: 0 8px 20px rgba(46, 204, 113, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Rasm qo'yilmagan holat uchun eslatma */
+.img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    color: #8c9ba5;
+    padding: 10px;
+    border: 1px dashed rgba(46, 204, 113, 0.4);
+}
+
+/* O'ng taraf: Matnlar qismi */
+.about-content {
+    flex: 1;
+    max-width: 580px;
+}
+
+.about-title {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.about-desc {
+    font-size: 14px;
+    line-height: 1.75;
+    color: #d1d5db;
+    border-left: 2px solid #2ecc71;
+    padding-left: 16px;
+    margin-bottom: 18px;
+}
+
+.about-desc-secondary {
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: #9ca3af;
+    margin-bottom: 28px;
+}
+
+/* Qisqa ma'lumotlar katakchalari */
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 32px;
+}
+
+.highlight-box {
+    background-color: rgba(46, 204, 113, 0.06);
+    border: 1px solid rgba(46, 204, 113, 0.25);
+    padding: 12px 16px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.highlight-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #2ecc71;
+    margin-bottom: 4px;
+}
+
+.highlight-value {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Mobil qurilmalar uchun moslashuv */
+@media (max-width: 992px) {
+    .about-section {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .about-gallery {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr); /* Telefonda 2 ustun bo'ladi */
+    }
+
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+/* ================= FOOTER: VISITOR COUNTER & MUSIC ================= */
+.site-footer {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto auto 0;
+    padding: 18px 40px 26px;
+    border-top: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.visitor-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #9ca3af;
+    background: rgba(46, 204, 113, 0.06);
+    border: 1px solid rgba(46, 204, 113, 0.25);
+    padding: 8px 14px;
+    border-radius: 3px;
+}
+
+.visitor-counter strong {
+    color: #2ecc71;
+    font-weight: 700;
+}
+
+.counter-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #2ecc71;
+}
+
+.music-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #2ecc71;
+    border: 1px solid #2ecc71;
+    padding: 8px 16px;
+    font-size: 12.5px;
+    font-weight: 500;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.music-btn:hover,
+.music-btn.playing {
+    background-color: #2ecc71;
+    color: #161c22;
+}
