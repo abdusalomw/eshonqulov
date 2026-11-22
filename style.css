@@ -4,7 +4,22 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+@media (max-width: 768px) {
+  header, .navbar {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px 20px;
+  }
 
+  .nav-links { /* sizdagi menyu klassi nomi */
+    display: flex !important;
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+    font-size: 14px;
+  }
+}
 body {
     background-color: #161c22; /* Umumiy to'q fon */
     color: #ffffff;
